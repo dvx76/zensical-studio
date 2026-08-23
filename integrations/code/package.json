@@ -90,6 +90,11 @@
         "command": "zensicalStudio.connections.pin",
         "title": "Pin Current Resource",
         "icon": "$(pinned)"
+      },
+      {
+        "command": "zensicalStudio.toggleBold",
+        "title": "Zensical Studio: Toggle Bold",
+        "enablement": "editorLangId == python-markdown"
       }
     ],
     "menus": {
@@ -165,6 +170,14 @@
         }
       ]
     },
+    "keybindings": [
+      {
+        "command": "zensicalStudio.toggleBold",
+        "key": "ctrl+b",
+        "mac": "cmd+b",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == python-markdown"
+      }
+    ],
     "configurationDefaults": {
       "[python-markdown]": {
         "editor.colorDecorators": false,

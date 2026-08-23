@@ -28,6 +28,7 @@ import type { ExtensionContext } from "vscode";
 import type { LanguageClient } from "vscode-languageclient/node";
 import type { Location, Position } from "vscode-languageserver-types";
 
+import { registerEditingCommands } from "./editing";
 import { registerPreviewCommand } from "./preview";
 
 /* ----------------------------------------------------------------------------
@@ -66,6 +67,7 @@ export function registerCommands(
     }),
   );
   registerPreviewCommand(context, getClient);
+  registerEditingCommands(context);
 }
 
 /* ----------------------------------------------------------------------------
